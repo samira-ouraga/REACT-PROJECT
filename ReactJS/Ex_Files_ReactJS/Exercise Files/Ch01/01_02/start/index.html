@@ -31,37 +31,9 @@
             document.getElementById("root")
         );
     </script> -->
-    <!-- <script type="text/babel">
-    //uisng JSX to include tags directly in react code
-    //preventing us from creating many create elements
-        // ReactDOM.render(
-        //     <h1>hello world</h1>,
-        //     document.getElementById("root")
-        // );
 
-        //using variables in  jsx
-        let city = "Abidjan";
-        ReactDOM.render(
-            <h1 id="heading">hello {city}</h1>,
-            document.getElementById("root")
-        );
-    </script> -->
-    
-    <!-- <script type="text/babel">
-    //using const
-        const Hello = () => 
-        (
-            <div className = "heading">
-                <h1> Welcome to React</h1>
-            </div>
-        )
-        ReactDOM.render(
-            <Hello/>,
-            document.getElementById("root")
-        );
-    </script> -->
 
-    <script type="text/babel">
+    <!-- <script type="text/babel">
         //using props object , provide data to a component to be displayed
         //a component is a function that takes in input and dispays result
             const Hello = (props) => 
@@ -79,7 +51,23 @@
                 <Hello library="React" message="enjoy"/>,
                 document.getElementById("root")
             );
-    </script> 
+    </script>  -->
+
+<script type="text/babel">
+    //using component hierarchy
+        const Lake = ({name}) => <h1>{name}</h1>;
+        const App = () => (
+            <div>
+                <Lake name  = "lake Gagnoa" />
+                <Lake name  = "lake Comoe" />
+                <Lake name  = "lake Issia" />
+            </div>
+        );
+        ReactDOM.render(
+            <App />,
+            document.getElementById("root")
+        );
+</script> 
     
 </body>
 </html>
