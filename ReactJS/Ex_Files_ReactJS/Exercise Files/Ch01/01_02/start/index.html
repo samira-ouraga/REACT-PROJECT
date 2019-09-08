@@ -4,16 +4,35 @@
     <title>React Project</title>
     <!-- adding react library-->
     <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
     <div id="root"></div>
-    <script type="text/javascript">
+    <!-- <script type="text/babel">
         ReactDOM.render(
-            React.createElement("h1", null, "Hello World"),
+        //creating nested element on the dom, in this case script type is text/javasciprt
+        //this method is not ideal so let's use JSX in the next script 
+        
+        React.createElement(
+                "div",
+                null,
+                React.createElement(
+                    "h1",
+                    null,
+                    "ho, hi"
+                )
+            ),
             document.getElementById("root")
         );
-    
+    </script> -->
+    <script type="text/babel">
+    //uisng JSX to include tags directly in react code
+    //preventing us from creating many create elements
+        ReactDOM.render(
+            <h1>hello world</h1>,
+            document.getElementById("root")
+        );
     </script>
 </body>
 </html>
