@@ -7,7 +7,7 @@
     <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <style>
-        #heading{
+        .heading{
             color: pink;
         }
     </style>
@@ -31,7 +31,7 @@
             document.getElementById("root")
         );
     </script> -->
-    <script type="text/babel">
+    <!-- <script type="text/babel">
     //uisng JSX to include tags directly in react code
     //preventing us from creating many create elements
         // ReactDOM.render(
@@ -45,6 +45,41 @@
             <h1 id="heading">hello {city}</h1>,
             document.getElementById("root")
         );
-    </script>
+    </script> -->
+    
+    <!-- <script type="text/babel">
+    //using const
+        const Hello = () => 
+        (
+            <div className = "heading">
+                <h1> Welcome to React</h1>
+            </div>
+        )
+        ReactDOM.render(
+            <Hello/>,
+            document.getElementById("root")
+        );
+    </script> -->
+
+    <script type="text/babel">
+        //using props object , provide data to a component to be displayed
+        //a component is a function that takes in input and dispays result
+            const Hello = (props) => 
+            {
+                console.log(props)
+                return
+                    (
+                        <div className = "heading">
+                            <h1> Welcome to {props.library}</h1>
+                            <p>{props.message}</p>
+                        </div>
+                    )
+            }
+            ReactDOM.render(
+                <Hello library="React" message="enjoy"/>,
+                document.getElementById("root")
+            );
+    </script> 
+    
 </body>
 </html>
