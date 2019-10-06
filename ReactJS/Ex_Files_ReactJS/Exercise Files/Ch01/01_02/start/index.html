@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>React Project</title>
+    <!-- adding react library-->
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        .heading{
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <!-- <script type="text/babel">
+        ReactDOM.render(
+        //creating nested element on the dom, in this case script type is text/javasciprt
+        //this method is not ideal so let's use JSX in the next script 
+
+        React.createElement(
+                "div",
+                null,
+                React.createElement(
+                    "h1",
+                    null,
+                    "ho, hi"
+                )
+            ),
+            document.getElementById("root")
+        );
+    </script> -->
+
+
+    <!-- <script type="text/babel">
+        //using props object , provide data to a component to be displayed
+        //a component is a function that takes in input and dispays result
+            const Hello = (props) => 
+            {
+                console.log(props)
+                return
+                    (
+                        <div className = "heading">
+                            <h1> Welcome to {props.library}</h1>
+                            <p>{props.message}</p>
+                        </div>
+                    )
+            }
+            ReactDOM.render(
+                <Hello library="React" message="enjoy"/>,
+                document.getElementById("root")
+            );
+    </script>  -->
+
+<script type="text/babel">
+    //using component hierarchy
+        const Lake = ({name}) => <h1>{name}</h1>;
+        const App = () => (
+            <div>
+                <Lake name  = "lake Gagnoa" />
+                <Lake name  = "lake Comoe" />
+                <Lake name  = "lake Issia" />
+            </div>
+        );
+        ReactDOM.render(
+            <App />,
+            document.getElementById("root")
+        );
+</script> 
+    
+</body>
+</html>
